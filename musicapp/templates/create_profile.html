@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+     <form method="post">
+          <fieldset>
+              <h1>Username:    {{ form.username }}</h1>
+            <h1>Email:     {{ form.email }}</h1>
+            <h1>Age:  {{ form.age }}</h1>
+
+                {% csrf_token %}
+              <!-- Button for Editing Album -->
+              <button class="edit-album" type="submit">Save Profile</button>
+
+</div>
+          </fieldset>
+        </form>
+      </section>
+
+
+{% endblock %}

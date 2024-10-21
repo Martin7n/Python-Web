@@ -1,0 +1,51 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+      <!-- Main Content -->
+      <!--Edit Page-->
+      <section class="editPage">
+        <form method="post">
+          <fieldset>
+            <legend>Edit Album</legend>
+            <div class="container">
+              <!-- Form for Editing Album -->
+              <label for="name">Album Name:</label>
+
+                {{ form.album_name }}
+
+
+
+              <label for="artist">Artist:</label>
+                         {{ form.artist }}
+
+              <label for="genre">Genre:</label>
+                {{ form.genre }}
+
+              <label for="description">Description:</label>
+                            {{ form.description }}
+
+
+
+
+              <label for="imgUrl">Image URL:</label>
+                {{ form.album_picture_url }}
+
+
+
+              <label for="price">Price:</label>
+                                 {{ form.price }}
+
+
+                {% csrf_token %}
+              <!-- Button for Editing Album -->
+              <button class="edit-album" type="submit">Save Album</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+{% endblock %}
