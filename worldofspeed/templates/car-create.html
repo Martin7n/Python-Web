@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+      <section id="create-page" class="auth">
+        <!-- create car form -->
+        <form id="create" method="post">
+          <div class="container">
+              {{ form }}
+{#            <h1 class="form-create-headline">Create Car</h1>#}
+{#            <label for="type">Type:</label>#}
+{##}
+{#              {{ form.car_type }}#}
+{#            <select name="type" required="" id="type">#}
+{#              <option value="" selected="">---------</option>#}
+{#              <option value="Rally">Rally</option>#}
+{#              <option value="Open-wheel">Open-wheel</option>#}
+{#              <option value="Kart">Kart</option>#}
+{#              <option value="Drag">Drag</option>#}
+{#              <option value="Other">Other</option>#}
+{#            </select>#}
+{#            <label for="model">Model:</label>#}
+{#               {{ form.car_model }}#}
+{#            <input#}
+{#              type="text"#}
+{#              name="model"#}
+{#              maxlength="20"#}
+{#              required=""#}
+{#              id="model"#}
+{#            />#}
+{##}
+{#            <label for="year">Year:</label>#}
+{#               {{ form.year }}#}
+{##}
+{##}
+{#            <label for="image_url">Image URL:</label>#}
+{#               {{ form.car_picture }}#}
+{#            <input#}
+{#              type="url"#}
+{#              name="image_url"#}
+{#              maxlength="200"#}
+{#              required=""#}
+{#              id="image_url"#}
+{#            />#}
+{##}
+{#            <label for="price">Price:</label>#}
+{#               {{ form.price }}#}
+{#            <input#}
+{#              type="number"#}
+{#              name="price"#}
+{#              step="any"#}
+{#              required=""#}
+{#              id="price"#}
+{#            />#}
+            {% csrf_token %}
+            <input class="btn" type="submit" value="Create Car" />
+          </div>
+        </form>
+      </section>
+    </div>
+
+
+
+{%  endblock %}
